@@ -1,9 +1,6 @@
 AiiDA virtual hands-on tutorial in 2021 Spring
 ===============================================
 
-2 days AiiDA hands-on tutorial in April or May will be held as a
-virtual zoom meeting.
-
 Plan
 ----
 
@@ -24,26 +21,26 @@ and the hands-on tutorials will be run on the PCs.
 Date & Location
 ----------------
 
-2 days AiiDA tutorial workshop in April or May will be held as a
-virtual zoom meeting.
+2 days AiiDA hands-on tutorial workshopwill be held
+on 10-11th of May by a virtual zoom meeting.
 
 Schedule
 --------
 
 In principle, no rigorous schedule is set-up. Participants will work
-on the tutorial or what they want to do in their own paces. Questions
-and discussions will be raised accordingly.
+on the tutorial materials or what they want to do in their own
+paces. Questions and discussions will be raised accordingly.
 
-First day 9:00 - 17:00
+10th May 9:00 - 17:00
 ^^^^^^^^^^^^^^^^^^^^^^
 
 - 9:00 - 9:10: Opening remarks
-- 9:10 - 9:30: Introduction to AiiDA
+- 9:10 - 9:30: Introduction to AiiDA (talk)
 - 9:30 - 12:00: Getting started
 - 13:00 - Afternoon: Verdi command line, Verdi shell and AiiDA objects,
   Submit, monitor and debug calculations
 
-Second day 9:00 - 17:00
+11th May 9:00 - 17:00
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 - 9:00 - 9:30: Presentation "Running phonon calculation with an iterative
