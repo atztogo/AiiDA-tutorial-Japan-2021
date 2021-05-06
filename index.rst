@@ -1,5 +1,5 @@
-AiiDA virtual hands-on tutorial in 2021 Spring
-===============================================
+AiiDA virtual hands-on tutorial workshop in 2021 Spring
+=======================================================
 
 Plan
 ----
@@ -12,16 +12,15 @@ people to support participants.
 
 In the hands-on tutorial, we will basically follow the `previous AiiDA
 tutorial material
-<https://aiida-tutorials.readthedocs.io/en/latest/pages/2019_ISSP_Chiba_Japan/>`_
-(we will modify this material a little). Participants are requested to
-install virtualbox to setup `Quantum Mobile
-<https://materialscloud.org/work/quantum-mobile>`_ on their PCs
-and the hands-on tutorials will be run on the PCs.
+<https://aiida-tutorials.readthedocs.io/en/latest/pages/2020_Intro_Week/index.html>`_,
+where the section 1 is replaced by this page: :ref:`quantum_mobile_setup`. Participants are requested to
+install virtualbox to setup Quantum mobile following :ref:`quantum_mobile_setup`
+on their own PCs and the hands-on tutorials can be started before the workshop.
 
 Date & Location
 ----------------
 
-2 days AiiDA hands-on tutorial workshopwill be held
+2 days AiiDA hands-on tutorial workshop will be held
 on 10-11th of May by a virtual zoom meeting.
 
 Schedule
@@ -34,8 +33,10 @@ paces. Questions and discussions will be raised accordingly.
 10th May 9:00 - 17:00
 ^^^^^^^^^^^^^^^^^^^^^^
 
-- 9:00 - 9:10: Opening remarks
-- 9:10 - 9:30: Introduction to AiiDA (talk)
+- 8:50 - 9:00: Zoom host open
+- 9:00 - 9:05: Say hello
+- 9:05 - 9:15: Opening remarks
+- 9:15 - 9:30: Introduction to AiiDA (talk)
 - 9:30 - 12:00: Getting started
 - 13:00 - Afternoon: Verdi command line, Verdi shell and AiiDA objects,
   Submit, monitor and debug calculations
