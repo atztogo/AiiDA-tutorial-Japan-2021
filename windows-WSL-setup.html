@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Windows WSL setup &#8212; AiiDA-tutorial-Japan-2021-Spring  documentation</title>
+    <title>Windows WSL1 setup &#8212; AiiDA-tutorial-Japan-2021-Spring  documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -14,6 +14,7 @@
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Windows PuTTY setup" href="windows-putty-setup.html" />
     <link rel="prev" title="macOS setup" href="macOS-setup.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -31,15 +32,21 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="windows-wsl-setup">
-<span id="id1"></span><h1>Windows WSL setup<a class="headerlink" href="#windows-wsl-setup" title="Permalink to this headline">¶</a></h1>
-<p>WSL is Windows Subsystem for Linux.</p>
+  <div class="section" id="windows-wsl1-setup">
+<span id="windows-wsl-setup"></span><h1>Windows WSL1 setup<a class="headerlink" href="#windows-wsl1-setup" title="Permalink to this headline">¶</a></h1>
+<p>WSL1 is Windows Subsystem for Linux version 1. The setting of WSL2 for
+connecting Quantum mobile is tricky and not recommended.</p>
 <div class="section" id="installation-of-wsl">
 <h2>Installation of WSL<a class="headerlink" href="#installation-of-wsl" title="Permalink to this headline">¶</a></h2>
-<p>The WSL is installed following this guide,
-<a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">https://docs.microsoft.com/en-us/windows/wsl/install-win10</a>.</p>
-<p>In the following, it is assumed that you will use Ubuntu 18.04:
-<a class="reference external" href="https://www.microsoft.com/ja-jp/p/ubuntu-1804-lts/9n9tngvndl3q?rtc=1&amp;activetab=pivot:overviewtab">https://www.microsoft.com/ja-jp/p/ubuntu-1804-lts/9n9tngvndl3q?rtc=1&amp;activetab=pivot:overviewtab</a>.</p>
+<p>The WSL1 is installed following this guide,
+<a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">https://docs.microsoft.com/en-us/windows/wsl/install-win10</a>. Be careful
+not to setup WSL2. To revert default to WSL1,
+<code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">wsl</span> <span class="pre">--set-default-version</span> <span class="pre">2</span>
+<span class="pre">`</span></code>
+in the powershell.</p>
+<p>In the following, it is assumed that you will use Ubuntu 20.04:
+<a class="reference external" href="https://www.microsoft.com/ja-jp/p/ubuntu-2004-lts/9n6svws3rx71?rtc=1&amp;activetab=pivot:overviewtab">https://www.microsoft.com/ja-jp/p/ubuntu-2004-lts/9n6svws3rx71?rtc=1&amp;activetab=pivot:overviewtab</a>.</p>
 </div>
 <div class="section" id="ssh-connection-to-vm">
 <h2>ssh connection to VM<a class="headerlink" href="#ssh-connection-to-vm" title="Permalink to this headline">¶</a></h2>
@@ -47,9 +54,7 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">ssh</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span> <span class="o">-</span><span class="n">p</span> <span class="mi">2222</span> <span class="o">-</span><span class="n">l</span> <span class="nb">max</span>
 </pre></div>
 </div>
-<p>where the password is <code class="docutils literal notranslate"><span class="pre">moritz</span></code>. The IP address can be modified at
-<code class="docutils literal notranslate"><span class="pre">Settings-&gt;Newtork-&gt;Port</span> <span class="pre">Forwarding</span></code></p>
-<a class="reference internal image-reference" href="_images/virtual-box-WSL-pf.jpg"><img alt="_images/virtual-box-WSL-pf.jpg" class="align-center" src="_images/virtual-box-WSL-pf.jpg" style="width: 50%;" /></a>
+<p>where the password is <code class="docutils literal notranslate"><span class="pre">moritz</span></code>.</p>
 </div>
 <div class="section" id="x-forwarding">
 <h2>X forwarding<a class="headerlink" href="#x-forwarding" title="Permalink to this headline">¶</a></h2>
@@ -59,7 +64,7 @@ VcXsrv. This is downloaded at
 <a class="reference external" href="https://sourceforge.net/projects/vcxsrv/">https://sourceforge.net/projects/vcxsrv/</a>. After the installation, open
 VcXsrv once and just clicking next, next, …, then to resident and
 the icon (X mark) would appear at taskbar notification area.</p>
-<p>On WSL-Ubuntu, x11-apps is needed to be installed by</p>
+<p>On WSL1-Ubuntu, x11-apps is needed to be installed by</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install x11-apps
 </pre></div>
 </div>
@@ -73,7 +78,7 @@ by</p>
 </pre></div>
 </div>
 <p>If succeeded, you will see eyes are watching your cursor.</p>
-<p>X forwarding is activated with <code class="docutils literal notranslate"><span class="pre">-X</span></code> or <code class="docutils literal notranslate"><span class="pre">--Y</span></code> option of ssh:</p>
+<p>X forwarding is activated with <code class="docutils literal notranslate"><span class="pre">-X</span></code> or <code class="docutils literal notranslate"><span class="pre">-Y</span></code> option of ssh:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh 127.0.0.1 -p 2222 -l max -X -R 6010:localhost:6000
 </pre></div>
 </div>
@@ -98,13 +103,6 @@ everytime. Instead of setting everytime, these can be written in
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">echo</span> <span class="s1">&#39;export DISPLAY=:10.0&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">bashrc</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="ssh-login-using-public-and-private-keys">
-<h2>ssh login using public and private keys<a class="headerlink" href="#ssh-login-using-public-and-private-keys" title="Permalink to this headline">¶</a></h2>
-<p>Setting up a pair of public and private ssh keys, you can login to Quantum
-Mobile without a passphrase. This pair of keys are generated by
-<code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code> that is included in macOS. More information is found at
-<a class="reference external" href="https://aiida-tutorials.readthedocs.io/en/latest/pages/2019_ISSP_Chiba_Japan/sections/setup.html#linux-and-macos">https://aiida-tutorials.readthedocs.io/en/latest/pages/2019_ISSP_Chiba_Japan/sections/setup.html#linux-and-macos</a>.</p>
 </div>
 <div class="section" id="save-ssh-long-setting-to-ssh-config">
 <h2>Save ssh long setting to <code class="docutils literal notranslate"><span class="pre">.ssh/config</span></code><a class="headerlink" href="#save-ssh-long-setting-to-ssh-config" title="Permalink to this headline">¶</a></h2>
@@ -158,6 +156,7 @@ name.</p>
   <li><a href="index.html">Documentation overview</a><ul>
   <li><a href="quantum-mobile-setup.html">Quantum Mobile setup</a><ul>
       <li>Previous: <a href="macOS-setup.html" title="previous chapter">macOS setup</a></li>
+      <li>Next: <a href="windows-putty-setup.html" title="next chapter">Windows PuTTY setup</a></li>
   </ul></li>
   </ul></li>
 </ul>
@@ -188,7 +187,7 @@ name.</p>
       
       
       
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.4</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

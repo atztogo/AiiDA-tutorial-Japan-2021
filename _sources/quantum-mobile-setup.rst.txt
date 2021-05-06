@@ -9,6 +9,12 @@ Virtualbox VM
 Ready to use AiiDA environment so-called Quantum Mobile is prepared by
 AiiDA team at https://materialscloud.org/work/quantum-mobile.
 
+Recommended version is v21.05.1.
+https://quantum-mobile.readthedocs.io/en/latest/releases/versions/21.05.1.html
+
+Older versions, v21.03.18-qe or v20.06.1 is OK except for pymatgen
+problem whose tentative solution is found at https://github.com/atztogo/aiida-tutorials/wiki.
+
 Virtualbox
 ~~~~~~~~~~
 To use this, you need to
@@ -24,17 +30,4 @@ Network and X-forwarding settings
 
    macOS-setup
    windows-WSL-setup
-
-
-Trouble shooting
-~~~~~~~~~~~~~~~~
-If you encounter any issue on the installation, please have a look at
-this page, https://github.com/marvel-nccr/quantum-mobile/wiki/Frequently-Asked-Questions.
-
-Ansible playbook
------------------
-For some people who want to install Quantum Mobile to your own
-physical or virtual machine, you can use Ansible playbook provided by
-AiiDA team, https://github.com/marvel-nccr/ansible-playbook-workhorse.
-The short instruction is written in this page, but some knowledge on
-Ansible is required.
+   windows-putty-setup
