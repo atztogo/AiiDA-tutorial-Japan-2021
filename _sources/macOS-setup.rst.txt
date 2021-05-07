@@ -34,7 +34,6 @@ All above settings are integrated into a ``.ssh/config`` like::
       Hostname 127.0.0.1
       Port 2222
       User max
-      IdentityFile ~/.ssh/aiida_tutorial
       ForwardX11 yes
       ForwardX11Trusted yes
       LocalForward 8888 localhost:8888
